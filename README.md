@@ -1,4 +1,4 @@
 servertest
 ==========
 
-serverrpec like Python program
+A program like serverspec which made with Python.
