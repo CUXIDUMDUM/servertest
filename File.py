@@ -15,6 +15,36 @@ class File(Resource_base.Resource_base):
     def be_file(self):
         isfile_result = os.path.isfile(self.__get_filename())
         return self.switch_return(isfile_result)
+    def exist(self)
+        pass
+    def be_directory(self)
+        pass
+    def be_link(self)
+        pass
+    def be_socket(self)
+        pass
+    def contain(self, word)
+        pass
+    def be_owned_by(self, owner)
+        pass
+    def be_mode(self, mode)
+        pass
+    def be_grouped_into(self, group)
+        pass
+    def be_linked_to(self, filename)
+        pass
+    def be_readable(self)
+        pass
+    def be_writable(self)
+        pass
+    def be_executable(self)
+        pass
+    def be_mounted(self, directory)
+        pass
+    def match_md5checksum(self, checksum)
+        pass
+    def match_sha256checksum(self, checksum)
+        pass
 
 if __name__ == '__main__':
     sv_file = File('/etc/hoge')
