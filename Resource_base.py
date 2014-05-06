@@ -21,6 +21,13 @@ class Resource_base:
             return rtn
         else:
             return not rtn
+    @staticmethod
+    def wrap_assert(func):
+        import functools
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            assert func(*args, **kwargs)
+        return wrapper
 
 if __name__ == '__main__':
     pass

@@ -12,38 +12,39 @@ class File(Resource_base.Resource_base):
         self.__filename = filename
     def __get_filename(self):
         return self.__filename
+    @Resource_base.Resource_base.wrap_assert
     def be_file(self):
         isfile_result = os.path.isfile(self.__get_filename())
         return self.switch_return(isfile_result)
-    def exist(self)
+    def exist(self):
         pass
-    def be_directory(self)
+    def be_directory(self):
         pass
-    def be_link(self)
+    def be_link(self):
         pass
-    def be_socket(self)
+    def be_socket(self):
         pass
-    def contain(self, word)
+    def contain(self, word):
         pass
-    def be_owned_by(self, owner)
+    def be_owned_by(self, owner):
         pass
-    def be_mode(self, mode)
+    def be_mode(self, mode):
         pass
-    def be_grouped_into(self, group)
+    def be_grouped_into(self, group):
         pass
-    def be_linked_to(self, filename)
+    def be_linked_to(self, filename):
         pass
-    def be_readable(self)
+    def be_readable(self):
         pass
-    def be_writable(self)
+    def be_writable(self):
         pass
-    def be_executable(self)
+    def be_executable(self):
         pass
-    def be_mounted(self, directory)
+    def be_mounted(self, directory):
         pass
-    def match_md5checksum(self, checksum)
+    def match_md5checksum(self, checksum):
         pass
-    def match_sha256checksum(self, checksum)
+    def match_sha256checksum(self, checksum):
         pass
 
 if __name__ == '__main__':
